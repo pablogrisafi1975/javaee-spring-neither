@@ -9,6 +9,7 @@ Better than a comparison: A dictionary between worlds
  * Probably everything that can be done in A can be don in B, with some external library help or just writing more code
  * My idea was going from Java EE to Spring to Nothing, but I ended up with Spring first beacuse I'm more familiar with Spring (and I think it has more features, but that's just my opinion)
  * I'm focused in web apps because that's waht I do for a living
+ * English is not my language, be gentle
  * Don't link. Links are quickly outdated, and people can google what they need
  * Follow the format
 ---
@@ -57,7 +58,7 @@ You can always change it
 #### Spring
 Spring is the only implementation of Spring, so no
 #### Java EE
-Yes, it is tha same of changing server. I'm not aware of any pluggable implementation that can be deployed on different servers, or if that makes any sense 
+Yes, it is the same of changing server. I'm not aware of any pluggable implementation that can be deployed on different servers, or if that makes any sense 
 #### Nothing
 I don't know what are you talking about
 #### Conclusion
@@ -74,3 +75,15 @@ Yes, but you will need to implement a subset of Java EE
 You are already using Nothing
 #### Conclusion
 There is no direct comparation in this case
+
+---
+### Core-Dependency Injection
+You probably know what I'm talking about
+#### Spring
+Spring is basically a DI framework plus other things. You can declare your dependencies in XML, java or groovy files, or use automatic injection. You can combine all those methods in one app. You can inject dependencies, resources, configuration file values and even command line arguments
+#### Java EE
+CDI (context and dependency injection) is the JEE equivalent. It can use XML or annotations. The context injection (the C in CDI) is a powerful concept I don't think Spring offers
+#### Nothing
+Google Guice, Dagger, PicoContainer can provide you with DI. Or you can not use DI and handle your dependencies by yourself
+#### Conclusion
+Don't let them fool you, neither in Spring nor in JEE you need to write a single XML line if you don't want to. And both give you a pretty similar set of features.
