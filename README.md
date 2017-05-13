@@ -1,6 +1,33 @@
 # Java EE | Spring | Nothing
 
-Better than a comparison: A dictionary between worlds
+>Better than a comparison: A dictionary between worlds
+
+## Table of Content
+
+* Initial Notes
+* Infrastructure-Servers
+* Infrastructure-Change Servers
+* Infrastructure-Change Implementation
+* Infrastructure-Remove Framwework
+* Core-Dependency Injection
+* Core-Configuration
+* Sql-Declarative Transactions
+* Sql-jdbc
+* Sql-ORM
+* Sql-Higher Abstraction Level
+* NoSql
+* Web-Security
+* Web-Component based MVC
+* Web-Action based MVC
+* Web-WebSockets
+* Web-ServerSentEvents
+* Web-Rest
+* Development-Startup
+* Development-IDE
+* Development-Debug
+* Final Notes
+
+## Initial Notes
 
  * This is not the place to say A is better than B
  * This is a place for the guy who normally works in A, and someday has to work in B, and wants to know at least how is some feature named in B
@@ -38,23 +65,23 @@ Pretty much any application container: GlassFish, JBoss, Wildfly, WebSphere, Pay
 #### Nothing
 Any server you like, everything already mentioned plus some really odd things like nanohttpd or even the one already present in you JRE (com.sun.net.httpserver.HttpServer)
 #### Conclusion
-You can use anything if you are not using Spring or JEE, Spring requieres a servlet container, JEE an application cotainer wich is a larger beast. But don't let them fool you: while back in the day a full application cotainer was a resource hungry, slow starter , memory eater 2 GB monster, today there are excelent implementations like Wildfly or Payara Micro that start as fast as Jetty and use about the same memory and disk space
+You can use anything if you are not using Spring or JEE, Spring requieres a servlet container, JEE an application container wich is a larger beast. But don't let them fool you: while back in the day a full application cotainer was a resource hungry, slow starter , memory eater 2 GB monster, today there are excelent implementations like Wildfly or Payara Micro that start as fast as Jetty and use about the same memory and disk space
 
 ---
 ### Infrastructure-Change Server
-¿Can I change the server I'm using?
+Can I change the server I'm using?
 #### Spring
 Yes, very easily. Spring is a collection of jars you can install in any compatible sever. It is couple of hours work 
 #### Java EE
 Yes, but maybe not so easily. While JEE is a standard, most implementations give you some extra niceties you need to carefully avoid if you want to keep your app compatible. And there are some incompatibilities you will find even if you are carefull. But it is doable, even if it is a couple of days work
 #### Nothing
-Yes, but depending on the old vs new server features and details you probably may need to change some code
+Yes, but depending on the old vs new server features and details you will probably need to change some code
 #### Conclusion
 You can always change it
 
 ---
 ### Infrastructure-Change implementation
-¿Can I change the implementation I'm using?
+Can I change the implementation I'm using?
 #### Spring
 Spring is the only implementation of Spring, so no
 #### Java EE
@@ -86,4 +113,12 @@ CDI (context and dependency injection) is the JEE equivalent. It can use XML or 
 #### Nothing
 Google Guice, Dagger, PicoContainer can provide you with DI. Or you can not use DI and handle your dependencies by yourself
 #### Conclusion
-Don't let them fool you, neither in Spring nor in JEE you need to write a single XML line if you don't want to. And both give you a pretty similar set of features.
+Don't let them fool you, neither in Spring nor in JEE you need to write a single XML line if you don't want to. And both give you a pretty similar set of features. 
+
+___
+___
+
+
+#### Final notes
+Made with love and [(GitHub-Flavored) Markdown Editor](https://jbt.github.io/markdown-editor/)
+
