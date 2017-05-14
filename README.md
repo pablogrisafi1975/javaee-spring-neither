@@ -175,17 +175,21 @@ Handle transaction commit/rollback via annotations or configuration files
 #### Spring
 The `@Transactional` annotation, tipically used at service level, affects
 every transactional resource involved that Spring is aware of. Spring
-however **can not** span a transaction over several databases. If you
-need to commit to more than one DB you need to use an external
-transaction manager, like Atomikos.
+however **can not** nativaly span a transaction over several databases.
+If  need to commit to more than one DB you need to use an external
+transaction manager, like Atomikos or Bitronix, wich are easily
+integrated into Spring.
 #### Java EE
 The `@Transactional` annotation, tipically used at service level, affects
-every transactional resource involved that Java EE is aware of. Java EE **can** span a transaction over several databases. 
+every transactional resource involved that Java EE is aware of. Java EE
+**can** span a transaction over several databases. 
 #### Nothing
-Guice has some support for `@Transactional` on JPA database access. Atomikos can be integrated...I think.
+Guice has some support for `@Transactional` on JPA database access. 
+Atomikos can be integrated to any system.
 #### Conclusion
 While Spring transaction management is somehow more flexible, it lacks 
 the power to handle transactions that affect more than one database.
+That can easily fixed integrating Atomikos or Bitronix.
 
 ___
 ___
