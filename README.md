@@ -5,13 +5,13 @@
 ## Table of Content
 
 
-* Initial Notes
-* Infrastructure-Servers
-* Infrastructure-Change Servers
-* Infrastructure-Change Implementation
-* Infrastructure-Remove Framwework
-* Core-Dependency Injection
-* Core-Configuration
+* [Initial Notes](#initial-notes)
+* [Infrastructure-Servers](#infrastructure-servers)
+* [infrastructure-Change Server](#infrastructure-change-server)
+* [Infrastructure-Change Implementation](#infrastructure-change-implementation)
+* [Infrastructure-Remove Framework](#infrastructure-remove-framework)
+* [Core-Dependency Injection](#core-dependency-injection)
+* [Core-Configuration](#core-configuration)
 * Sql-Declarative Transactions
 * Sql-jdbc
 * Sql-ORM
@@ -119,7 +119,7 @@ There is no direct comparation in this case.
 
 ---
 ### Infrastructure-Remove framework
-Can I remove the framwork I'm using and use Nothing instead?
+Can I remove the framework I'm using and use Nothing instead?
 #### Spring
 Yes, but you will need to implement a subset of Spring.
 #### Java EE
@@ -127,7 +127,7 @@ Yes, but you will need to implement a subset of Java EE.
 #### Nothing
 You are already using Nothing.
 #### Conclusion
-There is no direct comparation in this case
+Depending how much you are using Spring or Java EE, it can be easy, hard, impossible.
 
 ---
 ### Core-Dependency Injection
@@ -171,4 +171,3 @@ ___
 
 #### Final notes
 Made with love, [(GitHub-Flavored) Markdown Editor](https://jbt.github.io/markdown-editor/) and [Visual Studio Code](https://code.visualstudio.com/)
-
