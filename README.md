@@ -7,12 +7,12 @@
 
 * [Initial Notes](#initial-notes)
 * [Infrastructure-Servers](#infrastructure-servers)
-* [infrastructure-Change Server](#infrastructure-change-server)
+* [Infrastructure-Change Server](#infrastructure-change-server)
 * [Infrastructure-Change Implementation](#infrastructure-change-implementation)
 * [Infrastructure-Remove Framework](#infrastructure-remove-framework)
 * [Core-Dependency Injection](#core-dependency-injection)
 * [Core-Configuration](#core-configuration)
-* Sql-Declarative Transactions
+* [Sql-Declarative Transactions](#sql-declarative-transactions)
 * Sql-jdbc
 * Sql-ORM
 * Sql-Higher Abstraction Level
@@ -54,6 +54,8 @@ Equivalent feature or library, name and  brief description
 Equivalent feature or library, name and  brief description
 #### Conclusion
 Some final thoughts
+
+---
 ```
 
 ## Dictionary
@@ -165,9 +167,31 @@ Apache Commons Configuration and Typesafe Config give you lots of property
 reading facilities. Google Guice has some embedded property support.
 #### Conclusion
 The lack of support in Java EE can be easily fixed, Spring however has more options out of the box.
+
+---
+
+### Sql-Declarative Transactions
+Handle transaction commit/rollback via annotations or configuration files
+#### Spring
+The `@Transactional` annotation, tipically used at service level, affects
+every transactional resource involved that Spring is aware of. Spring
+however **can not** span a transaction over several databases. If you
+need to commit to more than one DB you need to use an external
+transaction manager, like Atomikos.
+#### Java EE
+The `@Transactional` annotation, tipically used at service level, affects
+every transactional resource involved that Java EE is aware of. Java EE **can** span a transaction over several databases. 
+#### Nothing
+Guice has some support for `@Transactional` on JPA database access. Atomikos can be integrated...I think.
+#### Conclusion
+While Spring transaction management is somehow more flexible, it lacks 
+the power to handle transactions that affect more than one database.
+
 ___
 ___
 
 
 #### Final notes
-Made with love, [(GitHub-Flavored) Markdown Editor](https://jbt.github.io/markdown-editor/) and [Visual Studio Code](https://code.visualstudio.com/)
+Made with love, 
+ [(GitHub-Flavored) Markdown Editor](https://jbt.github.io/markdown-editor/) and 
+ [Visual Studio Code](https://code.visualstudio.com/)
