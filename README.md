@@ -13,7 +13,7 @@
 * [Core-Dependency Injection](#core-dependency-injection)
 * [Core-Configuration](#core-configuration)
 * [Sql-Declarative Transactions](#sql-declarative-transactions)
-* Sql-jdbc
+* [Sql-JDBC](#sql-jdbc)
 * Sql-ORM
 * Sql-Higher Abstraction Level
 * NoSql
@@ -32,7 +32,7 @@
 
 ## Initial Notes
 
- * In this doc, framework tipycally means either **Java EE**, **Spring** or **Nothing**. 
+ * In this doc, framework typically means either **Java EE**, **Spring** or **Nothing**. 
  * **Nothing** is for people who dislike both Spring and JEE 
  * Competence between frameworks is a good thing.
  * This is not the place to say framework A is better than framework B.
@@ -102,7 +102,8 @@ if you want to keep your app compatible. And there are some
 incompatibilities you will find even if you are carefull. But it *is*
 doable, even if it is a couple of days work.
 #### Nothing
-Yes, but depending on the old vs new server features and details you will probably need to change some code.
+Yes, but depending on the old vs new server features and details you will 
+probably need to change some code.
 #### Conclusion
 You can always change it.
 
@@ -113,7 +114,11 @@ Can I change the implementation I'm using?
 No. Spring is the only implementation of Spring, so no.
 #### Java EE
 Yes, it's the same as changing servers. (I'm not aware of any pluggable
-Java EE implementation that can be deployed on different servers, or if that makes any sense)
+Java EE implementation that can be deployed on different servers, 
+or if that makes any sense). However, Java EE is a collections of several
+components and some of them are more likely to be changed: TomEE ships with
+OpenJPA for persistence, you can switch to Hibernate easily. Most implementations
+of the Java EE standard allow to easy change the JSF implementation
 #### Nothing
 I don't know what are you talking about.
 #### Conclusion
@@ -173,14 +178,14 @@ The lack of support in Java EE can be easily fixed, Spring however has more opti
 ### Sql-Declarative Transactions
 Handle transaction commit/rollback via annotations or configuration files
 #### Spring
-The `@Transactional` annotation, tipically used at service level, affects
+The `@Transactional` annotation, typically used at service level, affects
 every transactional resource involved that Spring is aware of. Spring
-however **can not** nativaly span a transaction over several databases.
+however **can not** natively span a transaction over several databases.
 If  need to commit to more than one DB you need to use an external
 transaction manager, like Atomikos or Bitronix, wich are easily
 integrated into Spring.
 #### Java EE
-The `@Transactional` annotation, tipically used at service level, affects
+The `@Transactional` annotation, typically used at service level, affects
 every transactional resource involved that Java EE is aware of. Java EE
 **can** span a transaction over several databases. 
 #### Nothing
@@ -191,6 +196,23 @@ While Spring transaction management is somehow more flexible, it lacks
 the power to handle transactions that affect more than one database.
 That can easily fixed integrating Atomikos or Bitronix.
 
+---
+
+### Sql-JDBC
+Direct access and support for JDBC connections
+#### Spring
+Spring JDB templates can take care of opening and closing the connection,
+statement and resultset as needed. It can an usually automatically map
+columns to fields with basic naming handling (FIRST_NAME maps to
+firstName) and allows RowMappers to flexible map query results to DTOs.
+You can have named parameters and also help with basic insert/updates
+#### Java EE
+Nothing by default, try Apache Commons DbUtils or JDBI
+#### Nothing
+Apache Commons DbUtils and the more modern JDBI can give you everything you need to handle JDBC connections without boilerplate 
+#### Conclusion
+Java EE is not very JDBC friendly, you are expected to use JPA
+
 ___
 ___
 
@@ -199,3 +221,4 @@ ___
 Made with love, 
  [(GitHub-Flavored) Markdown Editor](https://jbt.github.io/markdown-editor/) and 
  [Visual Studio Code](https://code.visualstudio.com/)
+
