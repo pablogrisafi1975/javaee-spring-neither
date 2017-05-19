@@ -199,7 +199,7 @@ That can easily fixed integrating Atomikos or Bitronix.
 ---
 
 ### Sql-JDBC
-Direct access and support for JDBC connections
+Direct access and support for JDBC connections without much boilerplate
 #### Spring
 Spring JDB templates can take care of opening and closing the connection,
 statement and resultset as needed. It can an usually automatically map
