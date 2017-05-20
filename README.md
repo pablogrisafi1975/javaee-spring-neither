@@ -15,7 +15,7 @@
 * [Sql-Declarative Transactions](#sql-declarative-transactions)
 * [Sql-JDBC](#sql-jdbc)
 * [Sql-ORM](#sql-orm)
-* Sql-Higher Abstraction Level
+* [Sql-Higher Abstraction Level](#sql-higher-abstraction-level)
 * NoSql
 * Web-Security
 * Web-Component based MVC
@@ -218,7 +218,7 @@ integrate Apache Commons DbUtils or JDBI to simplify JDBC access.
 ---
 
 ### Sql-OMR
-Thinking in your rows as domain objects
+Work like domain objects, persist like rows
 #### Spring
 Spring integrates well with Hibernate, Java Persistence API (JPA), Java
 Data Objects (JDO), MyBatis.
@@ -233,11 +233,35 @@ more lightweight alternatives like ebean-orm or OrmLite
 Everyone can use Hibernate without much hassle. Java EE and Spring have
 JPA support. Spring has a couple of extra alternatives, not so popular.
 There are lightweight alternatives if you use Nothing.
+
+---
+
+### Sql-Higher Abstraction Level
+Automatic repository/DAO creation.
+#### Spring
+Spring Data can generate runtime implementation of methods based on
+names. You write something like
+```
+  interface PersonRepository extends Repository<Person, Long> {
+    List<Person> findByLastname(String lastname);
+  }
+```   
+And the implementation is automatically generated. Works with JPA,
+MongoDB, Cassandra and other forms of data storage.
+#### Java EE
+There is no direct support, but Apache Delta Spike provides similar
+features (although only for JPA)
+#### Nothing
+I'm not aware of any stand alone project like this.
+#### Conclusion
+Spring has the most powerful version, Java EE is still behind on this.
+Couldn't find anything that works without Spring of Java EE.
+
 ___
 ___
 
 
-#### Final notes
+### Final notes
 Made with love, 
  [(GitHub-Flavored) Markdown Editor](https://jbt.github.io/markdown-editor/) and 
  [Visual Studio Code](https://code.visualstudio.com/)
