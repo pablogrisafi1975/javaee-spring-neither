@@ -14,7 +14,7 @@
 * [Core-Configuration](#core-configuration)
 * [Sql-Declarative Transactions](#sql-declarative-transactions)
 * [Sql-JDBC](#sql-jdbc)
-* Sql-ORM
+* [Sql-ORM](#sql-orm)
 * Sql-Higher Abstraction Level
 * NoSql
 * Web-Security
@@ -209,10 +209,30 @@ You can have named parameters and also help with basic insert/updates
 #### Java EE
 Nothing by default, try Apache Commons DbUtils or JDBI
 #### Nothing
-Apache Commons DbUtils and the more modern JDBI can give you everything you need to handle JDBC connections without boilerplate 
+Apache Commons DbUtils and the more modern JDBI can give you everything
+you need to handle JDBC connections without boilerplate 
 #### Conclusion
-Java EE is not very JDBC friendly, you are expected to use JPA
+Java EE is not very JDBC friendly, you are expected to use JPA. You can 
+integrate Apache Commons DbUtils or JDBI to simplify JDBC access. 
 
+---
+
+### Sql-OMR
+Thinking in your rows as domain objects
+#### Spring
+Spring integrates well with Hibernate, Java Persistence API (JPA), Java
+Data Objects (JDO), MyBatis.
+#### Java EE
+JPA and JDO are basic building blocks in Java EE. Hibernate is a JPA
+provider (so you can use it as any other JPA compatible provider) and you
+can easily access directly the Hibernate API if you want to.
+#### Nothing
+Hibernate can be used without any framework if you want. There are other
+more lightweight alternatives like ebean-orm or OrmLite 
+#### Conclusion
+Everyone can use Hibernate without much hassle. Java EE and Spring have
+JPA support. Spring has a couple of extra alternatives, not so popular.
+There are lightweight alternatives if you use Nothing.
 ___
 ___
 
@@ -221,4 +241,5 @@ ___
 Made with love, 
  [(GitHub-Flavored) Markdown Editor](https://jbt.github.io/markdown-editor/) and 
  [Visual Studio Code](https://code.visualstudio.com/)
+
 
