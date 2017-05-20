@@ -217,7 +217,7 @@ integrate Apache Commons DbUtils or JDBI to simplify JDBC access.
 
 ---
 
-### Sql-OMR
+### Sql-ORM
 Work like domain objects, persist like rows
 #### Spring
 Spring integrates well with Hibernate, Java Persistence API (JPA), Java
