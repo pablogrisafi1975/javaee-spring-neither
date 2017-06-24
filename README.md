@@ -19,11 +19,9 @@
 * [NoSql](#nosql)
 * [Web-Component based MVC](#web-component-based-mvc)
 * [Web-Action based MVC](#web-action-based-mvc)
-* Web-Reactive
-* Web-WebSockets
-* Web-Security
-* Web-ServerSentEvents
+* [Web-Reactive](#web-reactive)
 * Web-Rest
+* Web-Security
 * Queues
 * Scheduled tasks
 * Development-Startup
@@ -97,6 +95,7 @@ are excelent implementations like Wildfly or Payara Micro that start as
 fast as Jetty and use about the same memory and disk space.
 
 ---
+
 ### Infrastructure-Change Server
 Can I change the server I'm using?
 #### Spring
@@ -115,6 +114,7 @@ probably need to change some code.
 You can always change it.
 
 ---
+
 ### Infrastructure-Change implementation
 Can I change the implementation I'm using?
 #### Spring
@@ -133,6 +133,7 @@ I don't know what are you talking about.
 Java EE is more flexible in this case.
 
 ---
+
 ### Infrastructure-Remove framework
 Can I remove the framework I'm using and use Neither instead?
 #### Spring
@@ -146,6 +147,7 @@ Depending how much you are using Spring or Java EE, it can be easy, hard,
 impossible.
 
 ---
+
 ### Core-Dependency Injection
 You probably know what I'm talking about.
 #### Spring
@@ -167,6 +169,7 @@ write a single XML line if you don't want to. And both give you a pretty
 similar set of features. 
 
 ---
+
 ### Core-Configuration
 Reading configuration files, handling different values for dev/beta/prod
 environments.
@@ -272,6 +275,7 @@ Spring has the most powerful version, Java EE is still behind on this.
 Couldn't find anything that works without Spring of Java EE.
 
 ---
+
 ### NoSql
 Non RDBM ways to store/retrieve/query data
 #### Spring
@@ -287,6 +291,7 @@ AFAIK, Spring has the clear advantage here.
 Couldn't find anything similar that works without Spring.
 
 ---
+
 ### Web-Component based MVC
 Web framework based in components (JSF style)
 #### Spring
@@ -305,6 +310,7 @@ hated features. Client side web development seems to be moving now to
 Javascript frameworks like Angular or React, and web servers just expose services
 
 ---
+
 ### Web-Action based MVC
 Web framework based in actions (Classic MVC/Struts style)
 #### Spring
@@ -322,7 +328,41 @@ JEE does not have support for this, but again, client side web development seems
 to be moving now to Javascript frameworks like Angular or React, and web servers 
 just expose rest services
 
-___
+---
+
+### Web-Action based MVC
+Web framework based in actions (Classic MVC/Struts style)
+#### Spring
+Spring MVC can map forms to POJO's, handles validations, file upload/download,
+path/query/header/cookies parameters, template engines like JSP, Velocity and 
+Freemarker, support Websockets and ServerSentEvents
+#### Java EE
+There was a MVC 1.0 project that was supposed to bring action based MVC to JEE 
+but was abandoned
+#### Neither
+There are tons of frameworks that provide the same functionality: Apache Struts, 
+Tapestry, Wicket, Stripes, Grails
+#### Conclusion
+JEE does not have support for this, but again, client side web development seems 
+to be moving now to Javascript frameworks like Angular or React, and web servers 
+just expose rest services
+
+---
+
+### Web-Reactive
+Reactive Web framework
+#### Spring
+Spring 5.0 has a new web framework, webflux, that supports reactive programming
+through an extension of RxJava called Reactor. It is suppossed to have the same
+functionality as the classic Spring MVC but in an asynchronious reactive way
+#### Java EE
+I'm not aware of anything
+#### Neither
+There are some of frameworks that provide the same functionality: Akka, Vert.x, 
+RxJava, Reactor
+#### Conclusion
+JEE does not have support for this new paradigm, but as always, you can integrate
+some stand alone alternatives
 ___
 
 
