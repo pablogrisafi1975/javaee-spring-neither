@@ -20,7 +20,7 @@
 * [Web-Component based MVC](#web-component-based-mvc)
 * [Web-Action based MVC](#web-action-based-mvc)
 * [Web-Reactive](#web-reactive)
-* Web-Rest
+* [Web-Rest](#web-rest)
 * Web-Security
 * Queues
 * Scheduled tasks
@@ -362,7 +362,26 @@ There are some of frameworks that provide the same functionality: Akka, Vert.x,
 RxJava, Reactor
 #### Conclusion
 JEE does not have support for this new paradigm, but as always, you can integrate
-some stand alone alternatives
+some standalone alternatives
+
+---
+
+### Web-Rest
+Rest Web framework
+#### Spring
+Spring has no framework/library/component specifically designed to Rest. However
+you can get most functionallity required through MVC, Spring Data repository and
+Spring HATEOAS
+#### Java EE
+JAX-RS is the specification, and Jersey is the reference implementation. It is 
+very popular and has erything you may need aout of the box
+#### Neither
+Jersey itself can be used without JEE. There are several frameworks that provide 
+the same functionality: SparkJava, Dropwizard, RestEasy, Rapidoid 
+#### Conclusion
+You can do rest services pretty much with everything
+
+
 ___
 
 
