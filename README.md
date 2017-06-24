@@ -41,15 +41,15 @@
  someday has to work in framework B, and wants to know at least how is
  some feature named in framework B, and some details about it.
  * Probably everything that can be done in framework A can be done in
- framework B, with some external library help or just writing more code
+ framework B, with some external library help or just writing more code.
  * My original ordering idea was Java EE | Spring | Neither, (Real
  standard, popular alternative, total freedom) but I ended up with Spring
  first because I'm more familiar with Spring (and I think it has more
- features, but that's just my opinion)
+ features, but that's just my opinion).
  * I'm focused in web applications because that's what I do for a living
- * English is not my language, be gentle
+ * English is not my language, be gentle.
  * Don't link. Links are quickly outdated, and people can search what
- they need, if they have the right name
+ they need, if they have the right name.
  * Use the following format:
 ```md
 ### Category-Subcategory
@@ -284,7 +284,7 @@ There is no direct support
 I'm not aware of any stand alone project like this.
 #### Conclusion
 AFAIK, Spring has the clear advantage here.
-Couldn't find anything similar works without Spring.
+Couldn't find anything similar that works without Spring.
 ___
 ___
 
