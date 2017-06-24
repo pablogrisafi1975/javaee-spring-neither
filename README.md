@@ -17,11 +17,11 @@
 * [Sql-ORM](#sql-orm)
 * [Sql-Higher Abstraction Level](#sql-higher-abstraction-level)
 * [NoSql](#nosql)
-* Web-Security
-* Web-Component based MVC
+* [Web-Component based MVC][[#web-component-based-mvc]
 * Web-Action based MVC
 * Web-Reactive
 * Web-WebSockets
+* Web-Security
 * Web-ServerSentEvents
 * Web-Rest
 * Queues
@@ -279,12 +279,30 @@ Spring Data gives you automatic repositories over Mongo, Cassandra, Redis
 and some other engines. While the basics remains similar, some things may
 not be possible (or ma be too expensive) in a  determinated engine. 
 #### Java EE
-There is no direct support
+There is no direct support.
 #### Neither
 I'm not aware of any stand alone project like this.
 #### Conclusion
 AFAIK, Spring has the clear advantage here.
 Couldn't find anything similar that works without Spring.
+
+---
+### Web-Component based MVC
+Web framework based in components (JSF style)
+#### Spring
+No out of the box support. JoinFaces project enables JSF usage inside Spring
+#### Java EE
+JSF is the basic way to make web applications in Java EE. There are several
+libraries of components ( PrimeFaces, PrimeFaces Extensions, BootsFaces, 
+ButterFaces, RichFaces, OmniFaces, AngularFaces, Mojarra, MyFaces) and most
+of them can be used in any implementation. 
+#### Neither
+I'm not aware of any jsf-like library that you can use without an application
+server, or Spring pretending to be one. 
+#### Conclusion
+This was one of main selling points of Java EE and one of the most loved and
+hated features. Client side web development seems to be moving now to
+Javascript frameworks like Angular or React, and web servers just expose services
 ___
 ___
 
