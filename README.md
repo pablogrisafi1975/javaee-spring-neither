@@ -18,7 +18,7 @@
 * [Sql-Higher Abstraction Level](#sql-higher-abstraction-level)
 * [NoSql](#nosql)
 * [Web-Component based MVC](#web-component-based-mvc)
-* Web-Action based MVC
+* [Web-Action based MVC](#web-action-based-mvc)
 * Web-Reactive
 * Web-WebSockets
 * Web-Security
@@ -303,6 +303,25 @@ server, or Spring pretending to be one.
 This was one of main selling points of Java EE and one of the most loved and
 hated features. Client side web development seems to be moving now to
 Javascript frameworks like Angular or React, and web servers just expose services
+
+---
+### Web-Action based MVC
+Web framework based in actions (Classic MVC/Struts style)
+#### Spring
+Spring MVC can map forms to POJO's, handles validations, file upload/download,
+path/query/header/cookies parameters, template engines like JSP, Velocity and 
+Freemarker, support Websockets and ServerSentEvents
+#### Java EE
+There was a MVC 1.0 project that was supposed to bring action based MVC to JEE 
+but was abandoned
+#### Neither
+There are tons of frameworks that provide the same functionality: Apache Struts, 
+Tapestry, Wicket, Stripes, Grails
+#### Conclusion
+JEE does not have support for this, but again, client side web development seems 
+to be moving now to Javascript frameworks like Angular or React, and web servers 
+just expose rest services
+
 ___
 ___
 
