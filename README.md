@@ -16,7 +16,7 @@
 * [Sql-JDBC](#sql-jdbc)
 * [Sql-ORM](#sql-orm)
 * [Sql-Higher Abstraction Level](#sql-higher-abstraction-level)
-* NoSql
+* [NoSql](#nosql)
 * Web-Security
 * Web-Component based MVC
 * Web-Action based MVC
@@ -24,6 +24,7 @@
 * Web-WebSockets
 * Web-ServerSentEvents
 * Web-Rest
+* Queues
 * Scheduled tasks
 * Development-Startup
 * Development-IDE
@@ -270,6 +271,20 @@ I'm not aware of any stand alone project like this.
 Spring has the most powerful version, Java EE is still behind on this.
 Couldn't find anything that works without Spring of Java EE.
 
+---
+### NoSql
+Non RDBM ways to store/retrieve/query data
+#### Spring
+Spring Data gives you automatic repositories over Mongo, Cassandra, Redis
+and some other engines. While the basics remains similar, some things may
+not be possible (or ma be too expensive) in a  determinated engine. 
+#### Java EE
+There is no direct support
+#### Neither
+I'm not aware of any stand alone project like this.
+#### Conclusion
+AFAIK, Spring has the clear advantage here.
+Couldn't find anything similar works without Spring.
 ___
 ___
 
