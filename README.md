@@ -17,7 +17,7 @@
 * [Sql-ORM](#sql-orm)
 * [Sql-Higher Abstraction Level](#sql-higher-abstraction-level)
 * [NoSql](#nosql)
-* [Web-Component based MVC][[#web-component-based-mvc]
+* [Web-Component based MVC](#web-component-based-mvc)
 * Web-Action based MVC
 * Web-Reactive
 * Web-WebSockets
