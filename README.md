@@ -31,21 +31,22 @@
 
 ## Initial Notes
 
- * In this doc, framework means either **Java EE** or **Spring** 
+ * In this doc, framework means either **Java EE** or **Spring**.
  * **Neither** is for people who dislike both Spring and JEE 
- * Competence between frameworks is a good thing.
- * This is not the place to say framework A is better than framework B.
+ * Competence between frameworks is a good thing
+ * This is not the place to say framework A is better than framework B
  * This is a place for the guy who normally works in framework A, and
  someday has to work in framework B, and wants to know at least how is
- some feature named in framework B, and some details about it.
+ some feature named in framework B, and some details about it
  * Probably everything that can be done in framework A can be done in
- framework B, with some external library help or just writing more code.
+ framework B, with some external library help or just writing more code
  * My original ordering idea was Java EE | Spring | Neither, (Real
  standard, popular alternative, total freedom) but I ended up with Spring
  first because I'm more familiar with Spring (and I think it has more
- features, but that's just my opinion).
+ features, but that's just my opinion)
  * I'm focused in web applications because that's what I do for a living
  * English is not my language, be gentle.
+ * Write a final dot in every sentence. 
  * Don't link. Links are quickly outdated, and people can search what
  they need, if they have the right name.
  * Use the following format:
@@ -75,7 +76,7 @@ GlassFish, JBoss, Wildfly, WebSphere, Payara. The specific version of
 Spring you are using is compatible with a range of versions in
 the server. You can include the server in your app and deploy as a
 complete jar, you can install in a running server just for your app or
-even share the server with other apps. 
+even share the server with other apps.
 #### Java EE
 Pretty much any application container: GlassFish, JBoss, Wildfly, TomEE
 WebSphere, Payara. The specific implementation of JEE you are using
@@ -224,7 +225,7 @@ columns to fields with basic naming handling (FIRST_NAME maps to
 firstName) and allows RowMappers to flexible map query results to DTOs.
 You can have named parameters and also help with basic insert/updates.
 #### Java EE
-Nothing by default, try Apache Commons DbUtils or JDBI
+Nothing by default, try Apache Commons DbUtils or JDBI.
 #### Neither
 Apache Commons DbUtils and the more modern JDBI can give you everything
 you need to handle JDBC connections without boilerplate 
@@ -245,7 +246,7 @@ provider (so you can use it as any other JPA compatible provider) and you
 can easily access directly the Hibernate API if you want to.
 #### Neither
 Hibernate can be used without any framework if you want. There are other
-more lightweight alternatives like ebean-orm or OrmLite 
+more lightweight alternatives like ebean-orm or OrmLite.
 #### Conclusion
 Everyone can use Hibernate without much hassle. Java EE and Spring have
 JPA support. Spring has a couple of extra alternatives, not so popular.
@@ -277,7 +278,7 @@ Couldn't find anything that works without Spring of Java EE.
 ---
 
 ### NoSql
-Non RDBM ways to store/retrieve/query data
+Non RDBM ways to store/retrieve/query data.
 #### Spring
 Spring Data gives you automatic repositories over Mongo, Cassandra, Redis
 and some other engines. While the basics remains similar, some things may
@@ -293,9 +294,9 @@ Couldn't find anything similar that works without Spring.
 ---
 
 ### Web-Component based MVC
-Web framework based in components (JSF style)
+Web framework based in components (JSF style).
 #### Spring
-No out of the box support. JoinFaces project enables JSF usage inside Spring
+No out of the box support. JoinFaces project enables JSF usage inside Spring.
 #### Java EE
 JSF is the basic way to make web applications in Java EE. There are several
 libraries of components ( PrimeFaces, PrimeFaces Extensions, BootsFaces, 
@@ -307,7 +308,7 @@ server, or Spring pretending to be one.
 #### Conclusion
 This was one of main selling points of Java EE and one of the most loved and
 hated features. Client side web development seems to be moving now to
-Javascript frameworks like Angular or React, and web servers just expose services
+Javascript frameworks like Angular or React, and web servers just expose services.
 
 ---
 
@@ -316,36 +317,17 @@ Web framework based in actions (Classic MVC/Struts style)
 #### Spring
 Spring MVC can map forms to POJO's, handles validations, file upload/download,
 path/query/header/cookies parameters, template engines like JSP, Velocity and 
-Freemarker, support Websockets and ServerSentEvents
+Freemarker, support Websockets and ServerSentEvents.
 #### Java EE
 There was a MVC 1.0 project that was supposed to bring action based MVC to JEE 
-but was abandoned
+but was abandoned.
 #### Neither
 There are tons of frameworks that provide the same functionality: Apache Struts, 
-Tapestry, Wicket, Stripes, Grails
+Tapestry, Wicket, Stripes, Grails.
 #### Conclusion
 JEE does not have support for this, but again, client side web development seems 
 to be moving now to Javascript frameworks like Angular or React, and web servers 
-just expose rest services
-
----
-
-### Web-Action based MVC
-Web framework based in actions (Classic MVC/Struts style)
-#### Spring
-Spring MVC can map forms to POJO's, handles validations, file upload/download,
-path/query/header/cookies parameters, template engines like JSP, Velocity and 
-Freemarker, support Websockets and ServerSentEvents
-#### Java EE
-There was a MVC 1.0 project that was supposed to bring action based MVC to JEE 
-but was abandoned
-#### Neither
-There are tons of frameworks that provide the same functionality: Apache Struts, 
-Tapestry, Wicket, Stripes, Grails
-#### Conclusion
-JEE does not have support for this, but again, client side web development seems 
-to be moving now to Javascript frameworks like Angular or React, and web servers 
-just expose rest services
+just expose rest services.
 
 ---
 
@@ -354,32 +336,32 @@ Reactive Web framework
 #### Spring
 Spring 5.0 has a new web framework, webflux, that supports reactive programming
 through an extension of RxJava called Reactor. It is suppossed to have the same
-functionality as the classic Spring MVC but in an asynchronious reactive way
+functionality as the classic Spring MVC but in an asynchronious reactive way.
 #### Java EE
-I'm not aware of anything
+I'm not aware of anything.
 #### Neither
 There are some of frameworks that provide the same functionality: Akka, Vert.x, 
-RxJava, Reactor
+RxJava, Reactor.
 #### Conclusion
 JEE does not have support for this new paradigm, but as always, you can integrate
-some standalone alternatives
+some standalone alternatives.
 
 ---
 
 ### Web-Rest
-Rest Web framework
+Rest Web framework.
 #### Spring
 Spring has no framework/library/component specifically designed to Rest. However
 you can get most functionallity required through MVC, Spring Data repository and
-Spring HATEOAS
+Spring HATEOAS.
 #### Java EE
 JAX-RS is the specification, and Jersey is the reference implementation. It is 
-very popular and has erything you may need aout of the box
+very popular and has erything you may need aout of the box.
 #### Neither
 Jersey itself can be used without JEE. There are several frameworks that provide 
-the same functionality: SparkJava, Dropwizard, RestEasy, Rapidoid 
+the same functionality: SparkJava, Dropwizard, RestEasy, Rapidoid.
 #### Conclusion
-You can do rest services pretty much with everything
+You can do rest services pretty much with everything.
 
 
 ___
