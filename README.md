@@ -23,7 +23,7 @@
 * [Web-Rest](#web-rest)
 * [Web-Security](#web-security)
 * [Scheduled tasks](#scheduled-tasks)
-* Development-Startup
+* [Development-Startup](#development-startup)
 * Development-IDE
 * Development-Debug
 * [Final Notes](#final-notes)
@@ -400,6 +400,25 @@ enough.
 The programming models in JSR-352 and Spring Batch are pretty much the same. It is
 more complicated, but possible, if you use Neither.
 
+---
+
+### Development-Startup
+Tools that help you start a project from zero.
+#### Spring
+Spring Initializr helps you create the maven or graddle file and the folder structure
+you need, with all the dependencies you choose. It is a great way to boostrap a web
+application. Unfortunately it has no support for UI. JHipster (not from Spring) does
+pretty much the same and also includes the basic support for an Angular UI, a CRUD
+for every entity, administrator pages, metrics UI, and more.
+#### Java EE
+Haven't find anything like that. 
+#### Neither
+I don't thing there is a possible answer here. If you want Neither, you are probable 
+not going to like to have a tool creating the basics of the project for you.
+#### Conclusion
+Spring is leading here. However, it is to be noted than staring the development in a 
+Java EE environment is generally simpler, because lots of things are already present
+in the server.
 ___
 
 
