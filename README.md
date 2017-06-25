@@ -24,7 +24,7 @@
 * [Web-Security](#web-security)
 * [Scheduled tasks](#scheduled-tasks)
 * [Development-Startup](#development-startup)
-* Development-IDE
+* [Development-IDE](#development-ide)
 * Development-Debug
 * [Final Notes](#final-notes)
 
@@ -419,6 +419,35 @@ not going to like to have a tool creating the basics of the project for you.
 Spring is leading here. However, it is to be noted than staring the development in a 
 Java EE environment is generally simpler, because lots of things are already present
 in the server.
+
+---
+
+### Development-IDE
+IDE plugins to help development within a specific framework
+#### Spring
+Eclipse: Spring Tool Suite can be used as an Eclipse distribuiton, or installed as
+a plugin inside a working Eclipse. Offers autocomplete everywhere (config/xml/property
+files) graphical tools and several more options.
+
+IntelliJ: Has Spring support on Ultimate edition only.
+
+Netbeans: has some support for Spring out of the box.
+
+#### Java EE
+Eclipse: there is a Eclipse IDE for Java EE Developers, and also some implementations
+have their own set of plugins, like JBoss tools for Wildfly
+
+IntelliJ: Has Spring support on Ultimate edition only.
+
+Netbeans: has great support for Spring out of the box.
+
+#### Neither
+There is no possible answer.
+#### Conclusion
+While you don't need anything to use any framework, a specific tool can help you.
+Netbeans and IntelliJ Ultimate have out of the box support, Eclipse requieres plugins.
+
+---
 ___
 
 
