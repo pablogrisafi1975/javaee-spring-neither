@@ -25,7 +25,6 @@
 * [Scheduled tasks](#scheduled-tasks)
 * [Development-Startup](#development-startup)
 * [Development-IDE](#development-ide)
-* Development-Debug
 * [Final Notes](#final-notes)
 
 ## Initial Notes
