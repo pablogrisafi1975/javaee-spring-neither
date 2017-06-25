@@ -21,13 +21,12 @@
 * [Web-Action based MVC](#web-action-based-mvc)
 * [Web-Reactive](#web-reactive)
 * [Web-Rest](#web-rest)
-* Web-Security
-* Queues
+* [Web-Security](#web-security)
 * Scheduled tasks
 * Development-Startup
 * Development-IDE
 * Development-Debug
-* Final Notes
+* [Final Notes](#final-notes)
 
 ## Initial Notes
 
@@ -362,6 +361,26 @@ Jersey itself can be used without JEE. There are several frameworks that provide
 the same functionality: SparkJava, Dropwizard, RestEasy, Rapidoid.
 #### Conclusion
 You can do rest services pretty much with everything.
+
+---
+
+### Web-Security
+Security (Authentication and Authorization) for your application.
+#### Spring
+Spring Security offers authentication and authorization, plus protection against 
+attacks like session fixation, clickjacking, cross site request forgery, etc.
+You have users with roles, and annotations in your public methods with grant/revoke
+access to them, like `@PreAuthorize("hasRole('USER')")`.
+#### Java EE
+Java Authentication and Authorization Service (JAAS) offers authentication and
+authorization. You have users with roles, and annotations in your public methods 
+with grant/revoke access to them, like `@RolesAllowed("USER")`.
+#### Neither
+Apache Shiro, Pac4j and others can give you authentication and authorization.
+#### Conclusion
+Spring is a little more powerfull in declarative configuration, since you can
+have expression in the configuration. Anyway, every framework supports programatic
+configuration, so you can be as flexible and precise as you want in java.
 
 
 ___
