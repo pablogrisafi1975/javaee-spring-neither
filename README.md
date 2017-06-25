@@ -22,7 +22,7 @@
 * [Web-Reactive](#web-reactive)
 * [Web-Rest](#web-rest)
 * [Web-Security](#web-security)
-* Scheduled tasks
+* [Scheduled tasks](#scheduled-tasks)
 * Development-Startup
 * Development-IDE
 * Development-Debug
@@ -378,10 +378,27 @@ with grant/revoke access to them, like `@RolesAllowed("USER")`.
 #### Neither
 Apache Shiro, Pac4j and others can give you authentication and authorization.
 #### Conclusion
-Spring is a little more powerfull in declarative configuration, since you can
-have expression in the configuration. Anyway, every framework supports programatic
+Spring is a little more powerful in declarative configuration, since you can
+have expression in the configuration. Anyway, every framework supports programmatic
 configuration, so you can be as flexible and precise as you want in java.
 
+---
+
+### Scheduled tasks
+Potentially long tasks that run at specific moments.
+#### Spring
+Spring Batch offers transaction management, chunk based processing, declarative I/O,
+start/stop/restart/retry/skip tasks and a web based administration interface.
+#### Java EE
+JSR-352 is the specification of batch jobs for Java EE. It was heavily based in Spring
+Batch, which in turn implements the specification. 
+#### Neither
+JBeret is the Wildfly implementation of JSR-352 and can be used standalone with some 
+effort. For minimal requirements like run something at specific time, Quartz may be 
+enough.
+#### Conclusion
+The programming models in JSR-352 and Spring Batch are pretty much the same. It is
+more complicated, but possible, if you use Neither.
 
 ___
 
